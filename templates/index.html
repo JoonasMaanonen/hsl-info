@@ -4,33 +4,17 @@
 <div class="jumbotron text-center">
     <h1>Pyöräparkit</h1>
     <div class="row">
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <h4>Haukilahden Lukio</h4>
-                <div class="card-body">
-                    <p class="card-text">This is the time here</p>
+        {% for station in bike_stations %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <h4>{{station['name']}}</h4>
+                    <div class="card-body">
+                        <p class="card-text">{{station['stationId']}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <h4>Aalto-yliopisto (Metro)</h4>
-                <div class="card-body">
-                    <p class="card-text">This is the time here</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <h4>Fat Lizardin Pysäkki</h4>
-                <div class="card-body">
-                    <p class="card-text">This is the time here</p>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-
-
     <h1>Bussit</h1>
     <div class="row">
         <div class="col-md-4">
@@ -60,6 +44,39 @@
             </div>
         </div>
 
+
+    </div>
+
+    <h1>Metrot</h1>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <h4>Helsinkiin</h4>
+                <div class="card-body">
+                    <p class="card-text">Saapumisaika</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <h4>Espooseen</h4>
+                <div class="card-body">
+                    <p class="card-text">Saapumisaika</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <h4>551 (Pasilaan)</h4>
+                <div class="card-body">
+                    <p class="card-text">Saapumisaika</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
